@@ -1,37 +1,14 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vMONzaIj)
 # VG1-APACHE
 
-The appearance of independent work - Vagrant, SSH and Apache
+tento ubuntu apache2 HTTP server vytvořený přes script ve vagrant . 
+po spusteni serveru přes vagrant up (dojde k vytvoření nové WM kde se vše nastaví a spustí se vám webserver na portu 8080)
 
-Samostana prace - Vagrant, SSH, a Apache
+je možnost se přihlásti pomocí ssh kde mužete pomocí loginu nebo po uprave vagrant file si vložit vlasní public ssh klíč a do puttyagent si pridat vlastní private ssh key a poté se přihlásit bez hesla přes putty.
 
-- V Teams kliknete na odkaz Github Classrom, tim se Vam vytvori Vas repository pro toto zadani
-- Vytvorte si Clon Vaseho prvniho repository
-- Vytvorte v nem adresar pro Vas prvni server vytvoreny pomoci Vagrant
-- Do nej vlozte Vagrantfile z projektoveho repository - Vyberte si oblibenou Linux distribuci [2025-sposdk-osy](https://github.com/sposdknl/2025-sposdk-osy/)
-- Upravte Vagrantfile, aby fungoval portforward z portu 80 na port 8080
-- Zajistete import Vaseho SSH verejneho klice do instalovane VM
-- Zajistete instalaci web serveru Apache pomoci scriptu psaneho v bash
-- Vse bude konfigurovano automaticky, po vytvoreni VM bude funkcni SSH z Putty autentizovano pomoci SSH klice a na http://localhost:8080 bude bezet Webserver Apache 
-- Upravre README tak, aby bylo jasne co Vas projekt dela, strucne zdokumentujte.
-- Funkcni Vagrant deployment bude pridan do Vaseho repository na Guthub
-
-## Documentation
-
-- [Vagrant - Shell Provisioner](https://developer.hashicorp.com/vagrant/docs/provisioning/shell)
-- [Vagrant - File Provisioner](https://developer.hashicorp.com/vagrant/docs/provisioning/file)
-
-## Examples commands
-
-```console
-git clone https://github.com/sposdknl/VASPROJEKT
-cd VASPROJEKT && mkdir LinuxServer && cd LinuxServer
-cp ../2025-sposdk-osy/XYZ/Vagrantfile Vagrantfile
-vim Vagrantfile
-vim install-apache.sh
-vim .gitignore
-
-git add LinuxServer/*
-git commit "Add new VM + Automatizace"
-git push
-```
+popis instalace Apache2 serveru (co dělá ten script )
+1,uděla si to update systemu 
+2.nainstaluje si to apache2
+3.povolí to apache server 
+4.zapne to ten apache server
+5.napise do konzole že je hotovo a odkaz 
